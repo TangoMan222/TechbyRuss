@@ -8,74 +8,114 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #f0f0f0;
       line-height: 1.6;
     }
+
     .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
     }
-    h1 {
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
       color: #00bcd4;
-      font-size: 2.5rem;
     }
-    h2 {
-      font-size: 1.5rem;
-      color: #e0e0e0;
+
+    header h2 {
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: #b0bec5;
     }
-    ul {
-      padding-left: 1.2rem;
+
+    section {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    .section {
-      margin-top: 2rem;
-    }
-    .icon {
+
+    section h3 {
       font-size: 1.3rem;
-      margin-right: 0.3rem;
+      color: #4fc3f7;
+      margin-bottom: 1rem;
     }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.6rem;
+    }
+
     a {
       color: #4fc3f7;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .footer {
-      margin-top: 3rem;
+
+    footer {
+      text-align: center;
       font-size: 0.9rem;
-      color: #999;
+      margin-top: 3rem;
+      color: #888;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background-color: #00bcd4;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      background-color: #4dd0e1;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Russell Wheeler</h1>
-    <h2>Cybersecurity & Automation Consulting</h2>
-    <p>Helping small businesses secure their systems and streamline operations with modern tech solutions.</p>
+    <header>
+      <h1>TechbyRuss</h1>
+      <h2>Cybersecurity & Automation Consulting</h2>
+    </header>
 
-    <div class="section">
+    <section>
       <h3>✅ Services Offered</h3>
       <ul>
-        <li><strong>Security Checkup</strong> – Vulnerability scans + practical recommendations</li>
-        <li><strong>Automation Tools</strong> – Lightweight apps to streamline your workflow</li>
-        <li><strong>Custom Consulting</strong> – Personalized support for your tech needs</li>
+        <li><strong>Security Checkup:</strong> Vulnerability scanning, router audit, and simple reporting</li>
+        <li><strong>Automation Tools:</strong> Custom-built tools to streamline your day-to-day workflow</li>
+        <li><strong>Custom Tech Consulting:</strong> Personalized advice and solutions tailored to your business</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
       <h3>📞 Contact</h3>
       <p>Email: <a href="mailto:RussellWheeler@techbyruss.com">RussellWheeler@techbyruss.com</a><br>
       Phone: <a href="tel:+18504642624">(850) 464-2624</a></p>
-    </div>
+      <a href="mailto:RussellWheeler@techbyruss.com" class="cta">Request a Free Consultation</a>
+    </section>
 
-    <div class="footer">
-      &copy; 2025 TechbyRuss. All rights reserved.
-    </div>
+    <footer>
+      &copy; 2025 TechbyRuss. Built with 💻 and ☕️ in Florida.
+    </footer>
   </div>
 </body>
 </html>
