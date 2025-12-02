@@ -1,137 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TechbyRuss – Cybersecurity & Automation</title>
+  <meta charset="UTF-8">
+  <title>Russell Wheeler | Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #f0f0f0;
-      line-height: 1.6;
+      padding: 0;
+      background: #0f172a;
+      color: #e5e7eb;
     }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-
     header {
+      padding: 2rem 1.5rem;
       text-align: center;
-      margin-bottom: 3rem;
+      border-bottom: 1px solid #1f2937;
     }
-
     header h1 {
-      font-size: 3rem;
       margin: 0;
-      color: #00bcd4;
+      font-size: 2rem;
     }
-
-    header h2 {
-      font-size: 1.4rem;
-      font-weight: normal;
-      color: #b0bec5;
+    header p {
+      margin-top: 0.5rem;
+      color: #9ca3af;
     }
-
-    section {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem 2rem;
-      margin-bottom: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
-
-    section h3 {
-      font-size: 1.3rem;
-      color: #4fc3f7;
-      margin-bottom: 1rem;
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
     }
-
-    ul {
-      padding-left: 1.5rem;
+    .project {
+      background: #111827;
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid #1f2937;
     }
-
-    ul li {
-      margin-bottom: 0.6rem;
+    .project h2 {
+      margin: 0;
+      font-size: 1.1rem;
     }
-
-    a {
-      color: #4fc3f7;
+    .project p {
+      margin: 0.5rem 0 0.75rem 0;
+      color: #9ca3af;
+      font-size: 0.95rem;
+    }
+    .project a {
+      font-size: 0.9rem;
       text-decoration: none;
+      color: #60a5fa;
     }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     footer {
       text-align: center;
-      font-size: 0.9rem;
+      padding: 2rem 1.5rem;
+      color: #6b7280;
+      font-size: 0.85rem;
+      border-top: 1px solid #1f2937;
       margin-top: 3rem;
-      color: #888;
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.5rem;
-      background-color: #00bcd4;
-      color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    .cta:hover {
-      background-color: #4dd0e1;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>TechbyRuss</h1>
-      <h2>Cybersecurity & Automation Consulting</h2>
-    </header>
+  <header>
+    <h1>Russell Wheeler</h1>
+    <p>Network engineer • Cybersecurity • Homelab & automation nerd</p>
+  </header>
 
-    <section>
-    <section>
-  <h3>✅ Services Offered</h3>
-  <ul>
-    <li>
-      <strong>Security Checkup:</strong><br>
-      A hands-on review of your network, devices, and digital setup. I’ll identify common vulnerabilities, check your router and Wi-Fi security, and deliver a clear, jargon-free report. 
-      <br><em>Most small businesses are more exposed than they think — this checkup helps you stay ahead of threats before they cause real damage.</em>
-    </li>
+  <main>
+    <h2>Highlighted Projects</h2>
+    <p>These projects live on my GitHub, this site just makes them easier to browse.</p>
 
-    <li>
-      <strong>Automation Tools:</strong><br>
-      I build lightweight, custom tools that eliminate repetitive tasks and manual processes. Whether you need better tracking, reporting, or integration with tools like QuickBooks, I’ll help streamline your workflow and save hours per week.
-      <br><em>You don’t need expensive software — just the right tool for the job.</em>
-    </li>
+    <section class="project-list">
+      <article class="project">
+        <h2>Rooted Dreame Vacuum</h2>
+        <p>Reverse-engineering and documenting my Dreame vacuum, including rooted firmware, API notes, and images.</p>
+        <a href="https://github.com/TangoMan222/Hardware-Projects/tree/main/Rooted-Dreame-Vacuum" target="_blank">View on GitHub →</a>
+      </article>
 
-    <li>
-      <strong>Custom Tech Consulting:</strong><br>
-      Let’s talk through your unique setup and challenges. From remote access and backups to cloud migrations and general tech pain points — I’ll work with you to find practical, cost-effective solutions.
-      <br><em>This isn’t a one-size-fits-all service — it’s tech help built around your business.</em>
-    </li>
-  </ul>
+      <article class="project">
+        <h2>Hardware Projects</h2>
+        <p>Projects I do that are more Hardware based like building Physical tools or Hacking devices</p>
+        <a href="https://github.com/TangoMan222/Hardware-Projects/tree/main" target="_blank">View on GitHub →</a>
+      </article>
 
-  <p><strong>First consultation is 100% free —</strong> no pressure, no confusing jargon, just honest advice on how to protect and improve your setup.</p>
-</section>
-
-    <section>
-      <h3>Contact</h3>
-      <p>Email: <a href="mailto:RussellWheeler@techbyruss.com">RussellWheeler@techbyruss.com</a><br>
-      <a href="mailto:RussellWheeler@techbyruss.com" class="cta">Request a Free Consultation</a>
+      <!-- Add more projects here -->
     </section>
+  </main>
 
-    <footer>
-      &copy; 2025 TechbyRuss. Built with late nights and too much caffine.
-    </footer>
-  </div>
+  <footer>
+    <p>Full code on <a href="https://github.com/your-user" target="_blank">GitHub</a>.</p>
+    &copy; 2025 TechbyRuss. Built with late nights and too much caffine.
+  </footer>
 </body>
 </html>
