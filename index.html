@@ -97,5 +97,41 @@
     <p>Full code on <a href="https://github.com/TangoMan222" target="_blank">GitHub</a>.</p>
     &copy; 2025 TechbyRuss. Built with late nights and too much caffine.
   </footer>
+  <section class="project-list" id="projects">
+  <!-- Filled by JS -->
+</section>
+
+<script>
+  // Replace with your GitHub username
+  const GITHUB_USER = "TangoMan222";
+
+  async function loadRepos() {
+    const resp = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated`);
+    const repos = await resp.json();
+
+    const container = document.getElementById("projects");
+    container.innerHTML = "";
+
+    // Filter or sort as you want; here we keep all public repos
+    repos.forEach(repo => {
+      // Skip forks if you want
+      if (repo.fork) return;
+
+      const div = document.createElement("article");
+      div.className = "project";
+
+      div.innerHTML = `
+        <h2>${repo.name}</h2>
+        <p>${repo.description || "No description provided."}</p>
+        <a href="${repo.html_url}" target="_blank">View on GitHub →</a>
+      `;
+
+      container.appendChild(div);
+    });
+  }
+
+  loadRepos().catch(err => console.error(err));
+</script>
+
 </body>
 </html>
