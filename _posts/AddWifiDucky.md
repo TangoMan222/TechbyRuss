@@ -280,5 +280,3 @@ Before you flash this to your Rubber Ducky:
 * This approach is ideal for environments like classrooms, labs, or offices where you control the endpoints and need a quick way to standardize Wi-Fi settings.
 * If UAC prompts appear when launching PowerShell, the script may need to be adapted to run PowerShell without elevation or to handle the UAC dialog.
 * For more complex environments (WPA2-Enterprise, certificate-based auth, etc.), the XML portion would need to match your exact configuration.
-
-If you want, next I can help you write a shorter “quick usage” version of this post or a second post focused only on the WLAN XML structure and how to customize it.
