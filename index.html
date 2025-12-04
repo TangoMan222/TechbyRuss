@@ -38,17 +38,47 @@ title: "TechbyRuss"
   </div>
 </section>
 
-<section>
+<!-- NEW: Featured projects from _projects/ collection -->
+<section id="projects">
   <div class="section-header">
-    <h2>More Projects on GitHub</h2>
-    <p>Automatically pulled from my public repositories, newest first.</p>
+    <h2>Featured Projects</h2>
+    <p>Curated work that represents the kind of problems I like to solve.</p>
   </div>
 
-  <div class="project-grid" id="repo-projects">
-    <!-- Filled by JS from layout -->
+  <div class="project-grid">
+    {% for project in site.projects %}
+      {% if project.featured %}
+        <article class="card">
+          <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+          <p>
+            {% if project.summary %}
+              {{ project.summary }}
+            {% else %}
+              {{ project.excerpt | strip_html | truncate: 160 }}
+            {% endif %}
+          </p>
+          <div class="card-meta">
+            {% if project.tags %}
+              {% for tag in project.tags %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="card-links">
+            <a href="{{ project.url | relative_url }}">
+              <span>View project details</span> <span>→</span>
+            </a>
+            {% if project.github_url %}
+              <a href="{{ project.github_url }}" target="_blank" rel="noreferrer">
+                <span>View on GitHub</span> <span>↗</span>
+              </a>
+            {% endif %}
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
   </div>
 </section>
-
 
 <section>
   <div class="section-header">
