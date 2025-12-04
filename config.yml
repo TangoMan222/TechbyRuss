@@ -1,1 +1,8 @@
+title: "TechbyRuss"
+description: "Network engineering, cybersecurity, offensive security, homelab and automation projects."
+url: "https://tangoman222.github.io/TechbyRuss/"
+baseurl: ""
+theme: null
+markdown: kramdown
+permalink: /blog/:title/
 
