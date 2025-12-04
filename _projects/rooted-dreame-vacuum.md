@@ -40,9 +40,19 @@ Valetudo offers offline control for supported robot vacuums, eliminating the nee
 
 ## Requirements
 - **Hardware**: Dreame D10S Plus, access to a debug connector (16-pin Dreame Debug Connector recommended)
-<img src="/Rooted-Dreame-Vacuum/Pics/IMG_7480.jpeg" alt="Description" width="500" style="display: inline-block; transform-origin: center center; transform: rotate(90deg);"/>
-<img src="/Rooted-Dreame-Vacuum/Pics/IMG_7481.jpeg" alt="Description" width="500" style="display: inline-block; transform-origin: center center; transform: rotate(90deg);"/>
-<img src="/Rooted-Dreame-Vacuum/Pics/IMG_7483.jpeg" alt="Description" width="500" style="display: inline-block; transform-origin: center center; transform: rotate(90deg);"/>
+
+<img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7480.jpeg"
+     alt="Description"
+     width="500"
+     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
+<img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7481.jpeg"
+     alt="Description"
+     width="500"
+     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
+<img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7483.jpeg"
+     alt="Description"
+     width="500"
+     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
 - **Software**:
   - Debian Linux (Bookworm) with a GUI
   - Allwinner LiveSuit tool
@@ -70,8 +80,14 @@ This rooting process is divided into three phases:
 1. **Enter Fastboot Mode**:
    - Make sure that the USB OTG ID Jumper is NOT set
    - Connect the breakout PCB to the vacuum.
-   <img src="/Hardware-Projects/Rooted-Dreame-Vacuum/Pics/IMG_7496.jpeg" alt="Description" width="500" style="display: inline-block; transform-origin: center center; transform: rotate(90deg);"/>
-   <img src="/Hardware-Projects/Rooted-Dreame-Vacuum/Pics/IMG_7497.jpeg" alt="Description" width="500" style="display: inline-block; transform-origin: center center; transform: rotate(90deg);"/>
+  <img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7496.jpeg"
+     alt="Description"
+     width="500"
+     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
+   <img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7497.jpeg"
+     alt="Description"
+     width="500"
+     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
    - Plug a cable into the Micro USB port.
    - Hold the breakout button, then hold the vacuum power button. Release the power button after 5 seconds while holding the breakout button for an additional 3 seconds.
    - The LED on the robot should now be flashing
