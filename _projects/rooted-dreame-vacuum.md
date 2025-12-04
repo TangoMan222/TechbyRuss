@@ -1,19 +1,3 @@
----
-layout: default
-title: "Rooted Dreame Vacuum"
-tags: ["hardware", "reverse engineering", "home assistant"]
-github_url: "https://github.com/TangoMan222/Hardware-Projects/tree/main/Rooted-Dreame-Vacuum"
-summary: >
-  Reverse engineering and rooting a Dreame robot vacuum to move control and telemetry off the vendor cloud and into my own homelab and automation stack.
-featured: true
----
-
-<div class="post-content">
-
-<div class="post-meta">
-  Project · Hardware, Reverse Engineering, Home Assistant
-</div>
-
 # Rooting and Installing Valetudo on Dreame D10S Plus
 
 This repository provides a detailed guide on rooting the Dreame D10S Plus vacuum cleaner and installing Valetudo, an open-source solution for offline control. Following this guide enables local-only access to your robot vacuum, bypassing cloud services for enhanced privacy. 
@@ -40,19 +24,6 @@ Valetudo offers offline control for supported robot vacuums, eliminating the nee
 
 ## Requirements
 - **Hardware**: Dreame D10S Plus, access to a debug connector (16-pin Dreame Debug Connector recommended)
-
-<img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7480.jpeg"
-     alt="Description"
-     width="500"
-     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
-<img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7481.jpeg"
-     alt="Description"
-     width="500"
-     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
-<img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7483.jpeg"
-     alt="Description"
-     width="500"
-     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
 - **Software**:
   - Debian Linux (Bookworm) with a GUI
   - Allwinner LiveSuit tool
@@ -80,14 +51,6 @@ This rooting process is divided into three phases:
 1. **Enter Fastboot Mode**:
    - Make sure that the USB OTG ID Jumper is NOT set
    - Connect the breakout PCB to the vacuum.
-  <img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7496.jpeg"
-     alt="Description"
-     width="500"
-     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
-   <img src="https://raw.githubusercontent.com/TangoMan222/Hardware-Projects/main/Rooted-Dreame-Vacuum/Pics/IMG_7497.jpeg"
-     alt="Description"
-     width="500"
-     style="display: inline-block; transform-origin: center center; transform: rotate(90deg);" />
    - Plug a cable into the Micro USB port.
    - Hold the breakout button, then hold the vacuum power button. Release the power button after 5 seconds while holding the breakout button for an additional 3 seconds.
    - The LED on the robot should now be flashing
@@ -159,15 +122,3 @@ Verify the vacuum boots correctly. If successful, rooting is complete.
    ```bash
    tar cvf /tmp/backup.tar /mnt/private/ /mnt/misc/
    curl -X POST http://<ip-address>:1337/upload -F 'file=@/tmp/backup.tar'
-
-The GitHub repository contains:
-
-- Firmware analysis notes.
-- Scripts and configuration snippets.
-- Photos and diagrams where needed.
-
-You can view it here:
-
-- [Rooted Dreame Vacuum on GitHub]({{ page.github_url }})
-
-</div>
