@@ -38,31 +38,17 @@ title: "TechbyRuss"
   </div>
 </section>
 
-<section id="projects">
+<section>
   <div class="section-header">
-    <h2>Featured Projects</h2>
-    <p>Curated work that represents the kind of problems I like to solve.</p>
+    <h2>More Projects on GitHub</h2>
+    <p>Automatically pulled from my public repositories, newest first.</p>
   </div>
 
-  <div class="project-grid">
-    {% for project in site.data.projects %}
-      <article class="card">
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
-        <div class="card-meta">
-          {% for tag in project.tags %}
-            <span>{{ tag }}</span>
-          {% endfor %}
-        </div>
-        <div class="card-links">
-          <a href="{{ project.url }}" target="_blank" rel="noreferrer">
-            <span>View on GitHub</span> <span>→</span>
-          </a>
-        </div>
-      </article>
-    {% endfor %}
+  <div class="project-grid" id="repo-projects">
+    <!-- Filled by JS from layout -->
   </div>
 </section>
+
 
 <section>
   <div class="section-header">
