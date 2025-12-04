@@ -1,3 +1,13 @@
+---
+layout: default
+title: "Rooted Dreame Vacuum"
+tags: ["hardware", "reverse engineering", "home assistant"]
+github_url: "https://github.com/TangoMan222/Hardware-Projects/tree/main/Rooted-Dreame-Vacuum"
+summary: >
+  Reverse engineering and rooting a Dreame robot vacuum to move control and telemetry off the vendor cloud and into my own homelab and automation stack.
+featured: true
+---
+
 # Rooting and Installing Valetudo on Dreame D10S Plus
 
 This repository provides a detailed guide on rooting the Dreame D10S Plus vacuum cleaner and installing Valetudo, an open-source solution for offline control. Following this guide enables local-only access to your robot vacuum, bypassing cloud services for enhanced privacy. 
