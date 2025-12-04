@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>TechbyRuss</h1>
+        <span>Russell Wheeler · Network, Cyber, Homelab, AI</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="{{ "/" | relative_url }}#top">Home</a></li>
+          <li><a href="{{ "/" | relative_url }}#projects">Projects</a></li>
+          <li><a href="{{ "/blog/" | relative_url }}">Blog</a></li>
+          <li><a href="{{ "/" | relative_url }}#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Full source on
+      <a href="https://github.com/TangoMan222" target="_blank" rel="noreferrer">GitHub</a>.
+      &copy; 2025 TechbyRuss. Built with late nights and too much caffeine.
+    </p>
+  </footer>
+</div>
+
+<script>
+  const GITHUB_USER = "TangoMan222";
+
+  async function loadRepos() {
+    const container = document.getElementById("repo-projects");
+    if (!container) return;
+
+    try {
+      const resp = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated`);
+      if (!resp.ok) {
+        console.error("GitHub API error", resp.status);
+        return;
+      }
+
+      const repos = await resp.json();
+      container.innerHTML = "";
+
+      repos.forEach(repo => {
+        if (repo.fork) return;
+
+        const card = document.createElement("article");
+        card.className = "card";
+
+        const description = repo.description || "No description provided yet.";
+
+        card.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${description}</p>
+          <div class="card-meta">
+            <span>Updated: ${new Date(repo.updated_at).toLocaleDateString()}</span>
+            ${repo.language ? `<span>${repo.language}</span>` : ""}
+          </div>
+          <div class="card-links">
+            <a href="${repo.html_url}" target="_blank" rel="noreferrer">
+              <span>View on GitHub</span> <span>→</span>
+            </a>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    } catch (err) {
+      console.error("Failed to load repos", err);
+    }
+  }
+
+  loadRepos();
+</script>
+
+</body>
+</html>
 
