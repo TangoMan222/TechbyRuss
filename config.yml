@@ -1,6 +1,6 @@
 title: "TechbyRuss"
 description: "Network engineering, cybersecurity, homelab and automation projects."
-url: "https://tangoman222.github.io"
+url: "https://tangoman222.github.io/TechbyRuss"
 baseurl: ""
 theme: null
 markdown: kramdown
@@ -9,4 +9,4 @@ permalink: /blog/:title/
 collections:
   projects:
     output: true
-    permalink: /_projects/:name/
+    permalink: /projects/:name/
