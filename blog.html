@@ -1,1 +1,28 @@
+---
+layout: default
+title: "Blog"
+permalink: /blog/
+---
+
+<section>
+  <div class="section-header">
+    <h2>Blog</h2>
+    <p>All posts, newest first.</p>
+  </div>
+
+  <div class="blog-list">
+    {% for post in site.posts %}
+      <article class="card">
+        <div class="blog-meta">
+          {{ post.date | date: "%b %-d, %Y" }}
+          {% if post.tags and post.tags.size > 0 %}
+            · {{ post.tags | join: ", " }}
+          {% endif %}
+        </div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
 
