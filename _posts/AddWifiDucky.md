@@ -1,3 +1,10 @@
+---
+layout: default
+title: "AddWifi Ducky"
+date: 2025-12-04
+tags: ["Hardware", "Scripting", "Automation"]
+---
+
 ### Automating Wi-Fi Setup On Windows 11 With A Rubber Ducky Script
 
 #### Thanks to @bryce-kimber for some syntax and debug fixes
