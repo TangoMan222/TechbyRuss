@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AddWifi Ducky"
-tags: ["hardware", "Scripting", "Automation"]
+tags: ["Hardware", "Scripting", "Automation"]
 github_url: "https://github.com/TangoMan222/Scripts/blob/main/Ducky/Add-WiFi.txt"
 summary: >
   Script to Automate adding the WiFi SSID and Password to a Windows 11 computer using the Rubber Ducky by HAK5.
